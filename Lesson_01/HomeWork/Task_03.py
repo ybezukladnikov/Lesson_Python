@@ -4,9 +4,13 @@
 
 
 while True:
-    x,y = map(int,(input("Input coordinate X and Y between space: ").split()))
-    if x*y==0: print('It is not correct coordinate. Try again.')
-    else: break
+    try:
+        x,y = map(int,(input("Input coordinate X and Y between space: ").split()))
+        if x * y != 0 : break
+        print('It is not correct coordinate. Try again.')
+    except:
+        print('It is not correct coordinate. Try again.')
+
 
 if x>0 and y > 0: print('The point is in the first quarter')
 if x<0 and y > 0: print('The point is in the second quarter')
