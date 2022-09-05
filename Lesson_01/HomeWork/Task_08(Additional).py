@@ -5,5 +5,12 @@
 
 revenue, cost = map(int,(input("Input revenue and cost between space: ").split()))
 
-if revenue>cost: print("Profit = ", revenue-cost)
+if revenue>cost:
+    profit = revenue-cost
+    print("Profit = ", profit)
+    profitability = profit/revenue
+    print("Profitability = ", profitability)
+    num_of_employ = int(input("Input number of employ: "))
+    print("Profit on 1 employ = ", profit/num_of_employ)
+
 else: print("Loss = ", cost-revenue)
