@@ -4,18 +4,14 @@
 # 67.82 -> 23
 # 0.56 -> 11
 
+
+import Main_function as Base
 # Вариант через строку.
 
-while True:
-    try:
-        N = input("Input number: ")
-        number = float(N)
-        break
+num = Base.CheckNum(float)
+result = int(''.join([i for i in str(num) \
+                             if (i != "." and i != "-")]))
 
-    except:
-        print('It is not correct number. Try again.')
-
-result = float(''.join([i for i in N if (i != "." and i != "-")]))
 sum = 0
 while result > 0:
     sum += result % 10

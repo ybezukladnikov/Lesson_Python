@@ -4,32 +4,17 @@
 # Это происходит до тех пор, пока не будет найден палиндром.
 # Напишите такую программу, которая найдет палиндром введенного пользователем числа.
 
-while True:
-    try:
-        N = int(input("Input number: "))
-        break
-    except:
-        print('It is not correct number. Try again.')
-temp = N
-def Find_size(num):
-    count = 0
-    while num>0:
-        num//=10
-        count+=1
-    return count
+import Main_function as Base
 
-def Rev_number(num):
-    rev_N = 0
-    for i in range(Find_size(num) - 1, -1, -1):
-        rev_N += (num % 10) * (10 ** i)
-        num//=10
-    return rev_N
-
+n = Base.CheckNum(int)
+temp = n
 count = 0
 Flag = True
-while Rev_number(N)!=N:
-    res = N + Rev_number(N)
-    N = res
+
+while Base.Rev_number(n)!=n:
+    res = n + Base.Rev_number(n)
+    n = res
+    # Ввел ограничения на количество итераций. Не все числа имеют палиндром.
     count+=1
     if count>100:
         Flag = False
