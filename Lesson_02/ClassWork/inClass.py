@@ -5,13 +5,13 @@
 #
 # Для num = 5: 1, -3, 9, -27, 81
 
-N = int(input("Input number: "))
-array =[]
-
-for i in range(0, N):
-    array.append(1*((-3)**i))
-
-print(array)
+# N = int(input("Input number: "))
+# array =[]
+#
+# for i in range(0, N):
+#     array.append(1*((-3)**i))
+#
+# print(array)
 
 
 # 3.Найдите количество элементов массива, которые отличны от
@@ -32,5 +32,3 @@ print(array)
 # print(num_max)
 #
 # print(array_1)
-
-
