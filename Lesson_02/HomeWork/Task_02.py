@@ -7,13 +7,12 @@
 
 import Main_function as Base
 
-num = Base.CheckNum()
+num = Base.CheckNum(int)
 array = []
 prod = 1
 for i in range(1, num + 1):
-    for k in range(1, i + 1):
-        prod *= k
+    prod *= i
     array.append(prod)
-    prod = 1
+
 
 print(array)
