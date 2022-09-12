@@ -10,9 +10,12 @@ from random import randint
 
 size_list = abs(CheckNum(int, "Input size list: "))
 rand_list = [randint(1,11) for i in range(size_list)]
-result_list = []
-for i in range(math.ceil(size_list/2)):
-    result_list.append(rand_list[i]*rand_list[size_list-1-i])
 
-print(rand_list)
-print(result_list)
+def get_prod(array):
+    result_list = []
+    for i in range(math.ceil(len(array)/2)):
+        result_list.append(rand_list[i]*rand_list[size_list-1-i])
+    return result_list
+
+
+print(f'{rand_list} => {get_prod(rand_list)}')
