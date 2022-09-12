@@ -4,7 +4,7 @@
 # Это происходит до тех пор, пока не будет найден палиндром.
 # Напишите такую программу, которая найдет палиндром введенного пользователем числа.
 
-import Main_function as Base
+from Main_function import Function as Base
 
 n = Base.CheckNum(int)
 temp = n

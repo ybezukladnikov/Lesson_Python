@@ -5,7 +5,7 @@
 # Пример:
 # - пусть num = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
-import Main_function as Base
+from Main_function import Function as Base
 
 num = Base.CheckNum(int)
 array = []

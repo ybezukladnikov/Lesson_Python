@@ -5,10 +5,11 @@
 # 0.56 -> 11
 
 
-import Main_function as Base
+from Main_function.Function import CheckNum
+
 # Вариант через строку.
 
-num = Base.CheckNum(float)
+num = CheckNum(float, "Input number: ")
 result = int(''.join([i for i in str(num) \
                              if (i != "." and i != "-")]))
 

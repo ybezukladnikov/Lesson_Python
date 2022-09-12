@@ -3,10 +3,10 @@
 
 # Функция проверки ввода числа.
 
-def CheckNum(type_date):
+def CheckNum(type_date,massage):
     while True:
         try:
-            num = type_date(input("Input number: "))
+            num = type_date(input(massage))
             break
         except:
             print('It is not correct number. Try again.')
