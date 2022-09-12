@@ -11,7 +11,12 @@ from random import randint
 size_list = abs(CheckNum(int, "Input size list: "))
 rand_list = [randint(1,11) for i in range(size_list)]
 
-def get_prod(array):
+def get_prod(array:list):
+    '''
+    Функция находит произведение пар чисел из списка.
+    :param array: Список из рандомных чисел.
+    :return: Список, состоящий из произведений.
+    '''
     result_list = []
     for i in range(math.ceil(len(array)/2)):
         result_list.append(rand_list[i]*rand_list[size_list-1-i])

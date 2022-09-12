@@ -12,7 +12,12 @@ num = CheckNum(int, "Input number: ")
 sign = ''
 if num < 0: sign = '-'
 
-def convert(num):
+def convert(num:int):
+    '''
+    Функция конвертирует число из десятичной системы счисления в двоичную.
+    :param num: число, которое надо конвертировать.
+    :return:число в двоичной системе счисления.
+    '''
     if num ==1: return '1'
     elif num == 0: return '0'
     else: return convert(num//2)+str(num-(num//2)*2)

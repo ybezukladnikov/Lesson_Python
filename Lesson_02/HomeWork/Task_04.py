@@ -15,7 +15,7 @@ def Rand_in_time(min_val,max_val):
     return num
 
 
-print(Rand_in_time(-1000,10000))
+print(Rand_in_time(50,70))
 
 
 

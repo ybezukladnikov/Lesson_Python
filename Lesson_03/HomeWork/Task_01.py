@@ -12,7 +12,12 @@ size_list = abs(CheckNum(int, "Input size list: "))
 rand_list = [randint(1,11) for i in range(size_list)]
 list_number_on_odd_position = []
 
-def get_sum(array):
+def get_sum(array:list):
+    '''
+    Функция получает на вход список и находит сумму элементов списка, стоящих на нечётной позиции.
+    :param array: Список
+    :return: Число
+    '''
     sum_num = 0
     for i in range(1,len(array),2):
         sum_num+= rand_list[i]

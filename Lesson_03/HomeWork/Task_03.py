@@ -13,6 +13,11 @@ size_list = abs(CheckNum(int, "Input size list: "))
 rand_list = [round((randint(1,11) + random()),randint(1,5)) for i in range(size_list)]
 
 def get_fractional_part(num):
+    '''
+    Функция получает дробную часть из числа
+    :param num: Вещественной число
+    :return: Дробная часть.
+    '''
     return round((num - int(num)),5)
 
 List_fractional_part = list(map(get_fractional_part,rand_list))
