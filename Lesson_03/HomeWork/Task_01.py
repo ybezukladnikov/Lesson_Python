@@ -8,7 +8,7 @@
 from Main_function.Function import CheckNum
 from random import randint
 
-size_list = CheckNum(int, "Input size list: ")
+size_list = abs(CheckNum(int, "Input size list: "))
 sum_num =0
 rand_list = [randint(1,11) for i in range(size_list)]
 for i in range(1,size_list-1,2):sum_num+= rand_list[i]
