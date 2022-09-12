@@ -8,3 +8,8 @@ from Main_function.Function import CheckNum
 
 num = abs(CheckNum(int, "Input number: "))
 
+def fibonachi(num):
+    if num==1 or num == 2: return 1
+    else: return fibonachi(num-1) + fibonachi(num-2)
+
+print(fibonachi(num))
