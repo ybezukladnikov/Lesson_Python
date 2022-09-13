@@ -3,7 +3,7 @@
 
 # Функция проверки ввода числа.
 
-def CheckNum(type_date,massage):
+def CheckNum(type_date = int, massage = "Input number: "):
     while True:
         try:
             num = type_date(input(massage))
@@ -38,3 +38,16 @@ def Rev_number(num):
         rev_N += (num % 10) * (10 ** i)
         num //= 10
     return rev_N
+
+
+def get_only_num(string):
+    '''
+    Функция вытаскивает из строки тольки число.
+    :param string: получает на вход строку.
+    :return: только цифры, которые были в строке.
+    '''
+    result = ''
+    for i in string:
+        if ord(i) > ord('/') and ord(i) < ord(':'):
+            result += i
+    return result
