@@ -3,12 +3,12 @@
 
 # Функция проверки ввода числа.
 
-def CheckNum(type_date = int, massage = "Input number: "):
+def CheckNum(type_date=int, massage="Input number: "):
     while True:
         try:
             num = type_date(input(massage))
             break
-        except:
+        except ValueError:
             print('It is not correct number. Try again.')
 
     return num
@@ -51,3 +51,14 @@ def get_only_num(string):
         if ord(i) > ord('/') and ord(i) < ord(':'):
             result += i
     return result
+
+
+def is_num_simple(num):
+    '''
+    Функция проверяет, является ли число простым
+    :param num: число, которое мы проверям.
+    :return: True or False
+    '''
+    for i in range(2, num // 2 + 1):
+        if num % i == 0: return False
+    return True
