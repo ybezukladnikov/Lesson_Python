@@ -19,8 +19,8 @@ def get_list(num):
     try:
         list_result = []
         for i in range(2, num + 1):
-            if num % i == 0 and is_num_simple(i): list_result.append(i)
-        if len(list_result) == 0: raise Exception ("Test")
+            if not num % i and is_num_simple(i): list_result.append(i)
+        if not len(list_result): raise Exception ("Test")
 
     except Exception:
         return "There is not simple numbers"
