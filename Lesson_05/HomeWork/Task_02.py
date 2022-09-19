@@ -40,6 +40,7 @@ def check_num_max_sweet(total_can, type_date=int, massage= "Input number of max 
 num_sweet = check_num_sweet()
 max_sweet = check_num_max_sweet(num_sweet)
 
+
 while num_sweet > 0:
     print(f'Осталось конфет => {num_sweet}, взять можно до {max_sweet} конфет')
     num_cand_first_player = int(input("Первой игок, сколько конфет вы возьмете? "))
