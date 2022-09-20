@@ -17,8 +17,8 @@
 # Cложите получившиеся числа и верните из функции в качестве ответа вместе с преобразованным списком
 
 
-list_languages = ['python', 'c#']
-list_len_lang = [1,2]
+list_languages = ['python', 'c#', 'algol','alice', 'apex', 'asp', 'atlas']
+list_len_lang = [i for i in range(1, len(list_languages)+1)]
 
 def get_list_tuple(list_1, list_2):
     list_2_ch = [i.upper() for i in list_2]
@@ -26,13 +26,21 @@ def get_list_tuple(list_1, list_2):
     return result
 
 def filter(list_tuple):
+    new_list_len_lang = []
+    new_list_languages = []
     for i in list_tuple:
         order, languages = i
-        print(order,languages)
-
+        sum_bal = 0
+        for j in languages:
+            sum_bal+=ord(j)
+        if not sum_bal%order:
+            new_list_len_lang.append(sum_bal)
+            new_list_languages.append(languages)
+    new_list_tuple = list(zip(new_list_len_lang,new_list_languages))
+    return new_list_tuple
 
 list_tuple = get_list_tuple(list_len_lang, list_languages)
 print(list_tuple)
 
-filter(list_tuple)
+print(filter(list_tuple))
 
