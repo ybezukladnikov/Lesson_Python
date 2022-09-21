@@ -11,7 +11,22 @@
 # два + три => неправильный ввод: нужны числа
 # (2+((5-3)*(16-14)))/3 => 2
 
-text = "2+2"
+text = "2+5"
+x = ''
+y = ''
+dict_op = {'+': lambda x, y: x + y,
+           '-': lambda x, y: x - y,
+           '*': lambda x, y: x * y,
+           '/': lambda x, y: x / y,
+           }
+flag = True
+for i in text:
+    if i.isdigit() and flag: x += i
+    if i.isdigit() and not flag: y += i
+    if not i.isdigit():
+        flag = not flag
+        temp = i
 
-dict_op = {'+':lambda x,y:x+y}
+print((dict_op[temp])(int(x), int(y)))
+
 
