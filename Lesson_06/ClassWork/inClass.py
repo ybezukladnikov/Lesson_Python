@@ -11,22 +11,57 @@
 # два + три => неправильный ввод: нужны числа
 # (2+((5-3)*(16-14)))/3 => 2
 
-text = "2+5"
-x = ''
-y = ''
+def is_digit(char:str):
+    return True if char.isdigit() else False
+
+text = "2+3*4"
+
 dict_op = {'+': lambda x, y: x + y,
            '-': lambda x, y: x - y,
            '*': lambda x, y: x * y,
            '/': lambda x, y: x / y,
            }
-flag = True
-for i in text:
-    if i.isdigit() and flag: x += i
-    if i.isdigit() and not flag: y += i
-    if not i.isdigit():
-        flag = not flag
-        temp = i
 
-print((dict_op[temp])(int(x), int(y)))
+list_dig =[]
+list_operator = []
+x=''
+
+for i in range(len(text)):
+    if text[i].isdigit() : x += text[i]
+    if text[i].isdigit() and  i == len(text)-1:
+        list_dig.append(int(x))
+    if not text[i].isdigit():
+        list_operator.append(text[i])
+        list_dig.append(int(x))
+        x=''
+
+while len(list_operator)!=0:
+
+    temp_res = (dict_op[list_operator[0]])(list_dig[0],list_dig[1])
+    list_operator.pop(0)
+    list_dig.pop(0)
+    list_dig.pop(0)
+    list_dig.insert(0,temp_res)
+
+print(list_dig)
+print(list_operator)
+# for i in range(len(list_operator)):
+#     temp_res = (dict_op[list_operator[0]])(list_dig[0],list_dig[1])
+#     list_operator.pop(0)
+#     list_dig.pop(0)
+#     list_dig.pop(0)
+#     list_dig.insert(0,temp_res)
+
+
+
+# print((dict_op[temp])(int(x), int(y)))
+
+
+
+
+
+
+#
+# print((dict_op[temp])(int(x), int(y)))
 
 
