@@ -14,7 +14,7 @@
 def is_digit(char:str):
     return True if char.isdigit() else False
 
-text = "2+3*4"
+text = "2+5"
 
 dict_op = {'+': lambda x, y: x + y,
            '-': lambda x, y: x - y,

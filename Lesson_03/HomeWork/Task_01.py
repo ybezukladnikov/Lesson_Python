@@ -10,7 +10,9 @@ from random import randint
 
 size_list = abs(CheckNum(int, "Input size list: "))
 rand_list = [randint(1,11) for i in range(size_list)]
-list_number_on_odd_position = []
+list_number_on_odd_position =[]
+# list_number_on_odd_position = list(filter(lambda x: (rand_list.index(x))%2 ,rand_list))
+
 
 def get_sum(array:list):
     '''
