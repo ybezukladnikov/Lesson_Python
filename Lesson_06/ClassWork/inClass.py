@@ -11,10 +11,8 @@
 # два + три => неправильный ввод: нужны числа
 # (2+((5-3)*(16-14)))/3 => 2
 
-def is_digit(char:str):
-    return True if char.isdigit() else False
 
-text = "-5+8/4*3+5"
+text = "5+8/4*3+5"
 
 dict_op = {'+': lambda x, y: x + y,
            '-': lambda x, y: x - y,
